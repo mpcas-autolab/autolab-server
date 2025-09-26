@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<title> Xargo Genetics </title>
+</head>
+
+<body>
+	<header>
+		<div class="headerContainer"> 
+			<a class="headerlogo" href="/"> 
+				<text class="titleText"> Xargo Genetics </text>
+			</a>
+			<ul>
+				<li> <a class="headerMenuLinks" href="/app">Application</a> </li>
+				<li> <a class="headerMenuLinks" href="/about" >About</a> </li>
+			</ui>
+		</div>
+	</header>
+
+	<div id="center_box">
+
+		<div id="first_block" class="broad_box" >
+			<img src="images/aas/G_fig.png">
+			<img src="images/aas/E_fig.png">
+			<img src="images/aas/N_fig.png">
+			<img src="images/aas/E_fig.png">
+			<img src="images/aas/T_fig.png">
+			<img src="images/aas/I_fig.png">
+			<img src="images/aas/C_fig.png">
+			<img src="images/aas/S_fig.png">
+		</div>
+
+		<div id="second_block" class="thin_box">
+			<p> Log in </p>
+		<form action="" method="post" style>
+			<div> <input id="user_field" type="text" name="username" placeholder="Username" autofocus></div>
+			<div> <input id="pass_field" type="password" name="password" placeholder="Password"></div>
+
+    		<div style="color:tomato;">
+    			<% if (message.length > 0) { %>
+        			<%= message %> 
+    			<% } %>	
+    		</div>
+
+			<div> <input id="submit_btn" type="submit" value="login"></div>
+
+			
+
+		</form>
+		<div id="login_footer">
+			No account? <a href="register"> register here!</a>
+		</div>
+		</div>
+	</div>
+
+
+	<link rel="stylesheet" href="css/common.css">	
+	<link rel="stylesheet" href="css/login.css">	
+	<script src="home_script.js"></script>	
+
+
+</body>
+
+</html>

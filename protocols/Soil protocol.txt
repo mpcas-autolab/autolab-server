@@ -1,0 +1,1 @@
+{"protocol":[{"order":"PIP","origin":"Liquid","target":"Soil","volume":"500","viscous":false,"link":false},{"order":"INC","target":"Soil","temp":"60","time":"20"}],"items":[{"name":"Soil","keep":false,"tube":"micro","volume":0},{"name":"Liquid","keep":false,"tube":"micro","volume":0}]}

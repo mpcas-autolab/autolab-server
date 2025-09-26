@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<title> Xargo autolabs </title>
+	</head>
+	<body>
+
+	<header>
+		<div class="headerContainer"> 
+			<a class="headerlogo" href="/"> 
+				<text class="titleText"> Xargo Genetics </text>
+			</a>
+			<ul>
+				<li> <a class="headerMenuLinks" href="/app"> Application </a> </li>
+				<li> <a class="headerMenuLinks" href="/about"> About </a> </li>
+				<li> <a class="headerMenuLinks" href="/logout"> Log out </a> </li>
+			</ui>
+		</div>
+	</header>
+		
+	<div id="protocol_modal">
+	</div>
+		<div id="wrapper">
+	
+			<div id="content">
+
+				<div id="mainContent">
+					<div id="ctrButton" class="addToQueueButtonDiv" onclick="addBlockInput('CTR')"><img class="addToQueueButton" src="images/ctr.png"><p class="queueButtonText"> Centrifuge </p></div>
+					<div id="pipButton" class="addToQueueButtonDiv" onclick="addBlockInput('PIP')"><img class="addToQueueButton" src="images/pip.png"><p class="queueButtonText" > Pipette </p></div>
+					<div id="incButton" class="addToQueueButtonDiv" onclick="addBlockInput('INC')"><img class="addToQueueButton" src="images/inc.png"><p class="queueButtonText" > Incubate </p></div>
+					<div id="hotButton" class="addToQueueButtonDiv" onclick="addBlockInput('HOT')"><img class="addToQueueButton" src="images/hot.png"><p class="queueButtonText" > Heat </p></div>
+					<div id="colButton" class="addToQueueButtonDiv" onclick="addBlockInput('COL')"><img class="addToQueueButton" src="images/col.png"><p class="queueButtonText" > Cool </p></div>
+					<div id="pipButton" class="addToQueueButtonDiv" onclick="addBlockInput('ASP')"><img class="addToQueueButton" src="images/asp.png"><p class="queueButtonText" > Aspiration </p></div>
+				</div>
+				
+					<div id="inputModal"> </div>
+					<div id="protocolNamesModal"><ul id="protocolNamesModalUl"> <ul> </div>
+
+				<div id="timeline"> 
+
+					<div id="timelineLeftMenu"> 
+						<ul id="timeLineLeftMenuList">
+							<li class="timelineMenuList"><div class="timelineMenuItem" onclick="editActionBlock(this)"> Edit </div></li>
+							<li class="timelineMenuList"><div class="timelineMenuItem" onclick="copyActionBlock(this)"> Copy </div></li>
+							<li class="timelineMenuList"><div class="timelineMenuItem" onclick="pasteActionBlock(this)"> Paste </div></li>
+							<li class="timelineMenuList"><div class="timelineMenuItem" onclick="deleteActionBlock(this)"> Delete </div></li>
+							<li class="timelineMenuList"><div class="timelineMenuItem" onclick="linkActionBlock(this)"> Link </div></li>
+						</ul>
+						
+					</div>
+
+					<div id ="timeLineMiddleMenu">
+						<div id ="saveProtocol" onclick="saveList()">Save</div><div id ="loadProtocol" onclick="loadList()">Load</div>
+					</div>
+					<div id ="timeLineRightMenu" onclick="admitList()">Admit protocol</div>
+
+					<div id="timelineContent"> 	
+						<div id="timelineLeftScroll"> <div id="leftArrow"></div> </div>
+						<div id="timelineBlocks"> </div>
+						<div id="timelineRightScroll"> <div id="rightArrow"></div> </div>
+					</div>
+
+				</div>
+			</div>
+
+			<div id="rightWindow"> 	
+				<div id = rightWindowMenu>
+					<div id="menuText"> Item list </div><br />
+					<div class="rightWindowMenuIcon"> <input class="checkbox_neat" type="checkbox"  id="item_menu_checkbox"  onchange="itemMenuCheckbox()"><label for="item_menu_checkbox"> </label></div>
+					<div class="rightWindowMenuIcon"> <img  src="images/remove.png" onclick="removeCheckedItems()"> </div>
+				</div>
+
+				<div id="rightWindowContent">
+					<dl id="rightWindowList"></dl>
+				</div>
+
+				<div id="rightWindowFooter">
+					<table id="rightWindowFooterTable">
+						<tr>
+							<td> <input type="text" id="item_name" style="float:left;" placeholder="Item name" onkeypress="onItemChange();" autofocus> </td>
+							<td> <input class="checkbox_neat" type="checkbox" style="float:left;" onchange="falconBox()" id="falcon_tube"><label for="falcon_tube"> </label> </td> 
+							<td> <span style="float:left;">Falcon</span> </td>
+						</tr>
+						<tr>
+							<td> <input type="text" id="item_volume" style="float:left;" placeholder="Volume, &#181;l (optional)" onkeypress="onItemChange();">	</td>
+							
+							<td colspan="2"> <span id="addItemButton" style="float:left;" onclick="addItemToList()"> Add </span> </td>
+						</tr>
+					</table>
+  					
+					
+				</div>
+			</div>
+
+		</div>
+
+		<link rel="stylesheet" href="css/common.css">	
+		<link rel="stylesheet" href="css/app.css">			
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="app_script.js"></script>	
+
+	
+	</body>
+</html>

@@ -1,0 +1,466 @@
+/* NATIVE OBJECTS MODIFICATION */
+html{ 
+	height: 100%; 
+	width: 100%;
+}
+
+body{
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+
+dl dt {
+	padding: 1px;
+}
+dl dt:nth-child(even) { 
+	background: #F1F5F9; 
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    height: 0px;
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+/* END OF NATIVE OBJECTS*/
+
+
+
+#wrapper{
+	margin: 0;
+	height: calc(100% - 100px); 
+	width: 100%; 
+}
+
+
+#content{
+	float: left; 
+	height: 100%;
+	width: calc(100% - 280px);	
+	margin: 0;
+}
+	#mainContent{			
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box; /* allows borders and padding inside the div rather than outside */
+
+		height: calc(100% - 155px);
+		padding: 2%;
+	}
+	#inputModal {
+		display: none;
+	  	position: absolute;
+	  	bottom: 160px;
+	  	right: 18%;
+	}
+
+	.modal_X {
+		display: inline-block;
+		width:16px;
+		height:16px;
+		cursor:pointer;
+		color: #600;
+		font-weight: bold;
+		font-size: 22px;
+		font-family: arial;
+	}
+
+	#inputModal input[type="text"]{
+		border: 1px solid #DDD;
+		border-radius: 5px 5px 0 0;
+		background-color: #F1F5F9;
+		padding: 2px 5px;
+		margin: 0px 5px 5px 5px;
+		height:20px;
+		width: 200px;
+	}
+	#protocolNamesModal{
+		color: tomato;
+
+		display: none;
+	  	width:270px;
+	  	background-color: #2c3e50;
+		border-radius: 12px 0;
+
+	  	position: absolute;
+	  	bottom: 166px;
+	  	right: 290px;
+	}	
+	#protocolNamesModalUl{
+		list-style-type: none;
+		padding: 10px;
+		margin: 0;
+	}
+
+	#timeline{
+		height: 155px;
+		width: 100%;
+		margin: 0;
+	}
+		#timelineLeftMenu{
+		    background-color: #2c3e50;
+			width: calc(100% - 370px);
+			height: 35px;
+			margin: 0;
+			float: left;
+			color: #0097A7;
+		}
+		#timeLineMiddleMenu{
+			box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    -webkit-box-sizing: border-box; /* allows borders and padding inside the div rather than outside */
+
+			background-color: #2c3e50;
+			width: 170px;
+			height: 35px;
+			float: left;
+		}
+		#timeLineLeftMenuList{
+			margin: 0;
+			padding: 0 10px;
+		}
+		#timeLineMiddleMenu div{
+			box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    -webkit-box-sizing: border-box; /* allows borders and padding inside the div rather than outside */
+			border-left: 1px solid #567;
+
+			height:100%;
+			width: 50%;
+			margin: 0;			
+
+			display: inline-block;
+			font-size: 20px;
+			color: #20A7B7;
+			text-align: center;
+			line-height: 35px;
+			cursor: pointer;
+		}
+		#timeLineMiddleMenu div:hover{
+			color: #ddd;
+		}
+		#timeLineRightMenu{
+			box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    -webkit-box-sizing: border-box; /* allows borders and padding inside the div rather than outside */
+
+			background-color: #1976D2;
+			width: 200px;
+			height: 35px;
+			float: right;
+			font-size: 22px;
+			color: #fff;
+			text-align: center;
+			line-height: 35px;
+			cursor: pointer;
+		}
+		#timeLineRightMenu:hover{
+			background-color: #1996B2;
+		}
+		#timelineContent{
+			width: 100%;
+			height: 120px;			
+			margin: 0;
+		}
+		#timelineLeftScroll {
+			box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    -webkit-box-sizing: border-box;
+						
+		    float: left;
+			width: 3%;
+			height: 120px;	
+			margin: 0 1% 0 10px;
+			padding: 30px 0px;	
+		}	
+		#timelineLeftScroll img{
+			height:80px;
+		}
+		#timelineBlocks{
+			overflow: scroll;
+		    white-space: nowrap;
+
+			float:left;
+			width: calc(92% - 20px);
+		}	
+		#timelineBlocks div{
+			border-radius:  8px 8px 8px 0 ;
+		}		
+		#timelineBlocks div{
+		}
+		#timelineRightScroll {	
+			box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    -webkit-box-sizing: border-box;
+
+			float: right;
+			width: 3%;
+			height: 120px;	
+			margin: 0 10px 0 1%;
+			padding: 30px 0px;	
+		}
+		#timelineRightScroll img{
+			height:80px;
+		}
+		#leftArrow {
+			float:left;
+  			width: 0; 
+			height: 0; 
+			border-top: 30px solid transparent;
+			border-bottom: 30px solid transparent; 
+			border-right: 30px solid grey; 
+		}
+		#leftArrow:hover{
+			border-right: 30px solid #80CBC4;
+		}
+		#rightArrow{
+  			float:right;
+  			width: 0; 
+  			height: 0; 
+  			border-top: 30px solid transparent;
+  			border-bottom: 30px solid transparent;
+  			border-left: 30px solid grey;
+		}
+		#rightArrow:hover{
+			border-left: 30px solid #80CBC4;
+		}
+
+
+
+#rightWindow{
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box; /* allows borders and padding inside the div rather than outside */
+    border-left: 1px solid #bbb;
+
+	background-color: white;
+	float: left; 
+	width: 280px;/*16%; 
+	min-width: 300px;*/
+	height: 100%;
+	margin: 0;
+	padding: 1%;
+}
+	#rightWindowMenu{
+		box-sizing: border-box;
+	   	-moz-box-sizing: border-box;
+	    -webkit-box-sizing: border-box; /* allows borders and padding inside the div rather than outside */
+	    border-bottom: 1px solid #ccc;
+	    height: 56px;
+	}
+	#menuText{
+		text-align: center;
+		font-weight: none;
+		width: 100%;
+		font-size: 20px;
+		float: left;
+		margin-bottom: 3px;
+	}
+
+
+	#rightWindowContent{
+		width: 100%;
+		height:calc(100% - 115px);
+		padding: 0px;
+		cursor: pointer;
+    	overflow-y: scroll;
+	}
+	#rightWindowContent span{
+		margin: 0 16px;
+	}	
+	
+	.rightWindowListItemNameField{
+		font-size:20px;
+	}
+	#rightWindowFooter{	
+		box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    -webkit-box-sizing: border-box; /* allows borders and padding inside the div rather than outside */
+	    border-top: 1px solid #ccc;
+
+	    height: 80px;
+	    padding: 8px 0px;
+		bottom: 0px;
+		width: calc(14%); 
+	  	position: absolute;
+	}
+	#rightWindowFooter input{
+		margin: 2px;
+		width: 90%;
+	}
+	#rightWindowFooterTable{
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}	
+	#rightWindowFooterTable td{
+		font-size: 12px;
+		font-weight:bold;
+	}	
+	#rightWindowFooterTable td img{
+	    width: 16px; 
+	    height: auto;   
+		display: block;
+		margin: 0 auto; 
+		cursor: pointer;
+	}	
+
+
+
+/* CLASS MODIFIERS*/
+.queueButtonText{
+	margin: 0;
+	padding:5% 0 ;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+}
+.addToQueueButtonDiv{
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box; /* allows borders and padding inside the div rather than outside */
+
+	border: solid 2px #D7EAE2;
+	border-radius: 0 0 14px 14px;
+	cursor: pointer;
+
+	width: 10%;
+	min-width:140px;
+	margin: 0 3.25% 1% 3.25%;
+	padding: 16px 0;
+	float: left;
+}
+.addToQueueButtonDiv img {
+	display: block;
+    height: auto;
+    height: 36px;
+	margin: 0 auto; 
+}
+.addToQueueButtonDiv:Hover{
+	border: 2px solid #80BBB4;
+	color: #555;
+}
+.list_modal_names{
+    -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border-bottom: 0px solid #999;
+
+	padding: 5px;
+	cursor: pointer;
+	font-weight: bold;
+}
+.list_modal_names:hover{
+	color: lightcoral;
+}
+
+
+
+.timelineMenuList { 
+	float:left;
+    display: block;
+    margin: 0;
+}
+.timelineMenuItem {
+	font-size: 20px;
+	line-height: 35px;
+	color: #20A7B7;
+    margin: 0 20px 0 20px;
+}
+.timelineMenuItem:hover {
+	color:#ddd;
+	cursor: pointer;
+}
+
+
+
+
+.rightWidowMenuClickable{
+	cursor: pointer;
+	font-size: 18px;
+}
+.circle {
+	display: inline-block;
+	border-radius: 2px;
+	border: 2px solid #555;
+	width: 10px;
+	height: 10px; 
+	float: right;
+	vertical-align: center;
+	margin: 4px 7px 0px 0px;
+}
+.rightWindowMenuIcon{
+	margin: 2px 5px 0 15px;
+	float: left;
+}
+.rightWindowMenuIcon img{
+    width: 16px;
+    height: auto;   
+	cursor: pointer;
+}
+.rightMenuEditIcon{
+	display: inline-block;
+	float:right;
+	vertical-align: center;
+	height: 15px;
+	margin: 3px 8px 0px 0px;
+}
+#addItemButton{
+	padding: 1px 8px;	
+	margin-left: 3px;
+	background-color: #1976D2;
+	color: white;
+	border: 1px solid #1976D2;
+	font-size: 18px;
+	border-radius: 4px 0 0 4px;
+	font-weight: normal;
+}
+#addItemButton:hover{
+	background-color: #1996B2;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.actionBlock {
+	display: inline-block;
+
+    -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+
+    position: relative;
+	margin: 20px 40px 20px 0px;
+	height: 80px;
+	width: 120px;
+	
+	cursor: pointer;
+	text-align: center;
+	padding: 20px 0 20px 0;
+}
+.actionBlock b{
+	font-size: 20px;
+}
+.actionBlock .actionBoxText{
+	font-size: 14px;
+	color: #333;
+}
+.actionBlockEnumerationSpan{
+	font-weight: bold;
+	position: absolute;
+	top: 4px;
+	left: 5px;
+	font-size: 18px; 
+	color: #222;
+}
+.linkIconSpan{
+	position: absolute;
+	top:28px;
+	right:calc(-32px);
+}
+.linkIcon {
+	height: 24px;
+	width: 24px;
+}
+
+/* END OF CLASSES */
